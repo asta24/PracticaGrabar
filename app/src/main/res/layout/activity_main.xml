@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:contentDescription="@string/app_name"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="361dp"
+        android:layout_height="348dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/portada1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/android" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="418dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <Button
+            android:id="@+id/btn_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4sp"
+            android:layout_weight="1"
+            android:background="@drawable/reproducir"
+            android:contentDescription="@string/app_name"
+            android:onClick="PlayerPause" />
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4sp"
+            android:layout_weight="1"
+            android:background="@drawable/detener"
+            android:contentDescription="@string/app_name"
+            android:onClick="Stop" />
+
+        <Button
+            android:id="@+id/btn_repetir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4sp"
+            android:layout_weight="1"
+            android:background="@drawable/no_repetir"
+            android:contentDescription="@string/app_name"
+            android:onClick="Repetir" />
+
+        <Button
+            android:id="@+id/btn_anterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4sp"
+            android:layout_weight="1"
+            android:background="@drawable/anterior"
+            android:contentDescription="@string/app_name"
+            android:onClick="Anterior" />
+
+        <Button
+            android:id="@+id/btn_siguiente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4sp"
+            android:layout_weight="1"
+            android:background="@drawable/siguiente"
+            android:contentDescription="@string/app_name"
+            android:onClick="Siguiente" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="175dp"
+        android:layout_height="71dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/btn_grabar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4sp"
+            android:layout_weight="1"
+            android:background="@drawable/stop_rec"
+            android:contentDescription="@string/app_name"
+            android:onClick="Recorder" />
+
+        <Button
+            android:id="@+id/btn_reproducir2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4sp"
+            android:layout_weight="1"
+            android:background="@drawable/reproducir"
+            android:contentDescription="@string/app_name"
+            android:onClick="reproducir" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
